@@ -8,3 +8,10 @@
   	Visual Studio 2017以降は設定項目なし  
   - pdbファイルの出力設定  
   	ビルドの詳細で"pdb only"を"none"に変える  
+
+## ショートカットキー
+- コードの折り畳み  
+	- ドキュメント全体：` Ctrl + L, Ctrl + R `  
+	- 選択領域：` Ctrl + M, CtrL + M `  
+	- 
+
