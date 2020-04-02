@@ -13,5 +13,7 @@
 - コードの折り畳み  
 	- ドキュメント全体：` Ctrl + L, Ctrl + R `  
 	- 選択領域：` Ctrl + M, CtrL + M `  
-	- 
+- コメント  
+	- コメントの挿入：` Ctrl + K, Ctrl + C`  
+	- コメントの削除：` Ctrl + K, Ctrl + U`  
 
