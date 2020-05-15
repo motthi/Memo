@@ -5,3 +5,9 @@
 ## Latexの編集
 - [VSCodeで最高のLatex環境を作る](https://qiita.com/Gandats/items/d7718f12d71e688f3573)  
 
+## コマンド
+- `platex ex1.tex`  
+  ビルド
+- `ptex2pdf -l ex1`  
+  pdfファイルの生成
+
