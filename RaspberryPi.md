@@ -1,8 +1,8 @@
 # Raspberry pi
 ## apt-get updateで失敗
 - DHCPを再取得する  
-無線LANなら`sudo dhclient eth0`  
-有線LANなら`sudo dhclient wlan0`  
+無線LANなら`sudo dhclient wlan0`  
+有線LANなら`sudo dhclient eth0`  
 
 - nameserverを編集する  
 `/etc/resolv.conf`を編集する  
