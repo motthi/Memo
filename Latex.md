@@ -11,3 +11,9 @@
 - pdfファイルの生成  
   `ptex2pdf -l ex1`  
   
+## Visual Studio Codeでのショートカット
+- ビルド  
+  `Ctrl + Alt + B`
+- プレビュー生成  
+  `Ctrl + Alt + V`  
+  
