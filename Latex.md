@@ -5,6 +5,9 @@
 ## Latexの編集
 - [VSCodeで最高のLatex環境を作る](https://qiita.com/Gandats/items/d7718f12d71e688f3573)  
 
+## BibTex
+- [BiBTeXとは](https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9)
+
 ## コマンド
 - ビルド  
   `platex ex1.tex`  
@@ -16,4 +19,5 @@
   `Ctrl + Alt + B`
 - プレビュー生成  
   `Ctrl + Alt + V`  
+  
   
