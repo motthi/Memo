@@ -8,4 +8,5 @@ ffmpeg -i output.mp4 -vf setpts=PTS/10.0 -af atempo=10.0 -q 0 output_10.mp4
 ffmpeg -i output_10.mp4 -vf "palettegen" -y palette.png  
 ffmpeg -i output_10.mp4 -i palette.png -lavfi "fps=12,scale=900:-1:flags=lanczos [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" -y output.gif  
 ```
-  
+
+`aaa`
