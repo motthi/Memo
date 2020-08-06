@@ -1,4 +1,15 @@
 # FFMPEG
+## 連番画像から動画を作る
+```
+ffmpeg -r 30 -i output%03d.png -vcodec libx264 -pix_fmt yuv420p -r 60 out.mp4
+```
+
+## 2つの動画を横に並べる
+```
+ ffmpeg -i left.avi -i right.mp4 -filter_complex hstack outfile.avi
+ ```
+ 縦に並べる場合はvstack？
+
 ## Gifを倍速する
 純粋に倍速にするとなぜか色がおかしくなる．   
   
