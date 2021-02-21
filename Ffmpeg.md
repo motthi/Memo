@@ -6,9 +6,15 @@ ffmpeg -r 30 -i output%03d.png -vcodec libx264 -pix_fmt yuv420p -r 60 out.mp4
 
 ## 2つの動画を横に並べる
 ```
- ffmpeg -i left.avi -i right.mp4 -filter_complex hstack outfile.avi
+ ffmpeg -i left.avi -i right.mp4 -filter_complex hstack -r 60 -q 0outfile.avi
  ```
  縦に並べる場合はvstack？
+ 
+ ## クロップ（領域を指定して切り取り)
+ ```
+ ffmpeg -i input.mp4 -vf crop=440:440:100:40 -r 60 -q 0 output.mp4
+ ```
+ crop=出力幅:出力高:切取開始点（X軸）:切取開始点（Y軸）
 
 ## Gifを倍速する
 純粋に倍速にするとなぜか色がおかしくなる．   
