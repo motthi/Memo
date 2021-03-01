@@ -47,4 +47,7 @@ platex "file.tex"
 - プレビュー生成  
   `Ctrl + Alt + V`  
   
-  
+## 圧縮せずにPDFに出力
+Robomechではじかれることがある．
+圧縮せずにPDFに出力すれば可能
+`dvipdfmx file.dvi -z 0`
