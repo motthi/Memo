@@ -48,6 +48,6 @@ platex "file.tex"
   `Ctrl + Alt + V`  
   
 ## 圧縮せずにPDFに出力
-Robomechではじかれることがある．
-圧縮せずにPDFに出力すれば可能
+Robomechではじかれることがある．  
+圧縮せずにPDFに出力すれば可能．  
 `dvipdfmx file.dvi -z 0`
