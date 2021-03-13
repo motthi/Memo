@@ -11,3 +11,11 @@ sqlite3.OperationalError: 指定されたプロシージャが見つかりませ
 sqlite3.dllの読み込みが正常にできていないから（？）  
 Windows用のSQLiteをダウンロードし，`C:\Windows\System32`に入れる．  
 - [SQLite Download Page](https://www.sqlite.org/download.html)  
+
+### Slackへの終了通知
+```
+def slack_notify(msg = 'Finished'):
+    slack_user_id = '{user_id}'
+    slack_webhook_url = '{webhook_url}'
+    requests.post(slack_webhook_url, json={"text":f"{msg}"})
+```
