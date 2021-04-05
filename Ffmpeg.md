@@ -6,7 +6,7 @@ ffmpeg -r 30 -i output%03d.png -vcodec libx264 -pix_fmt yuv420p -r 60 out.mp4
 
 ## 2つの動画を横に並べる
 ```
- ffmpeg -i left.avi -i right.mp4 -filter_complex hstack -r 60 -q 0outfile.avi
+ ffmpeg -i left.avi -i right.mp4 -filter_complex hstack -r 60 -q 0 outfile.avi
  ```
  縦に並べる場合はvstack？
  
@@ -31,4 +31,8 @@ ffmpeg -i output_10.mp4 -vf "palettegen" -y palette.png
 
 //mp4からgifへ変換する  
 ffmpeg -i output_10.mp4 -i palette.png -lavfi "fps=12,scale=400:-1:flags=lanczos [x]; [x][1:v] paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle" -r 60 -y output.gif
+```
+## リサイズ
+```
+ffmpeg -i in.mp4 -vf scale=1280:-1 out.mp4
 ```
