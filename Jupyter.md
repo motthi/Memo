@@ -1,4 +1,10 @@
 # Jupyter
+## Jupyter Lab
+## Execute Time
+[jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time)
+jupyter_serverのバージョンを変更する必要があるかも．
+`pip install jupyter_server==1.6..4`
+
 ## Jupyter Notebook
 ### 拡張機能
 - [Jupyter notebookのextensionを使ってオレオレPythonチートシートを作る](https://qiita.com/hanon/items/1d00a1eac026af0389fb)
