@@ -1,8 +1,8 @@
 # Jupyter
 ## Jupyter Lab
 ## Execute Time
-[jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time)
-jupyter_serverのバージョンを変更する必要があるかも．
+[jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time)  
+jupyter_serverのバージョンを変更する必要があるかも．  
 `pip install jupyter_server==1.6..4`
 
 ## Jupyter Notebook
