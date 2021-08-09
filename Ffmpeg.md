@@ -6,7 +6,7 @@ ffmpeg -r 30 -i output%03d.png -vcodec libx264 -pix_fmt yuv420p -r 60 out.mp4
 
 ## 2つの動画を横に並べる
 ```
- ffmpeg -i left.avi -i right.mp4 -filter_complex hstack -r 60 -q 0 outfile.avi
+ ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack -r 60 -q 0 outfile.mp4
  ```
  縦に並べる場合はvstack？
  
