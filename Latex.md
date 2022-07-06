@@ -35,6 +35,37 @@ platex "file.tex"
 [BiBTeXとは](https://qiita.com/SUZUKI_Masaya/items/14f9727845e020f8e7e9)  
 [jbibtex　エラー: I found no \citation commands ---](https://behavior-analysis.at.webry.info/200906/article_2.html)
 
+### IEEEtransを使ったときに著者が-----となる
+同じ著者の論文が連続すると著者名が"-----"となる．  
+
+- 対策方法  
+まずbibファイルに以下のコマンドを書く．  
+```
+@IEEEtranBSTCTL{IEEEexample:BSTcontrol,
+  CTLdash_repeated_names = "no"
+}
+```
+次にTexファイルの本文の中に`\bstctlcite{IEEEexample:BSTcontrol}`と書く．  
+(begin{document}の直後）
+
+プリアンプルに以下を記入する
+```
+\makeatletter
+\def\bstctlcite{\@ifnextchar[{\@bstctlcite}{\@bstctlcite[@auxout]}}
+\def\@bstctlcite[#1]#2{\@bsphack
+\@for\@citeb:=#2\do{%
+\edef\@citeb{\expandafter\@firstofone\@citeb}%
+\if@filesw\immediate\write\csname #1\endcsname{\string\citation{\@citeb}}\fi}%
+\@esphack}
+\makeatother
+```
+
+- 参考  
+[IEEEtran.bstで著者名が線になるのを防ぐ](http://kawaiihaseigi.blogspot.com/2015/02/ieeetranbib.html)  
+[Is it normal for BibTeX to replace similar author names with "------"?](https://tex.stackexchange.com/questions/29381/is-it-normal-for-bibtex-to-replace-similar-author-names-with)  
+[How to Use the IEEEtran BIBTEX Style](http://tug.ctan.org/biblio/bibtex/contrib/IEEEtran/IEEEtran_bst_HOWTO.pdf)  
+
+
 ## コマンド
 - ビルド  
   `platex ex1.tex`  
@@ -51,3 +82,4 @@ platex "file.tex"
 Robomechではじかれることがある．  
 圧縮せずにPDFに出力すれば可能．  
 `dvipdfmx file.dvi -z 0`
+
