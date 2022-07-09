@@ -65,6 +65,25 @@ platex "file.tex"
 [Is it normal for BibTeX to replace similar author names with "------"?](https://tex.stackexchange.com/questions/29381/is-it-normal-for-bibtex-to-replace-similar-author-names-with)  
 [How to Use the IEEEtran BIBTEX Style](http://tug.ctan.org/biblio/bibtex/contrib/IEEEtran/IEEEtran_bst_HOWTO.pdf)  
 
+## 文書内リンクの有効化
+プリアンプルに以下を記述する  
+(`\usepackage[dvipdfmx]{hyperref,graphicx}`も忘れずに)  
+```
+\usepackage[dvipdfmx]{hyperref,graphicx}
+% for hyperref
+\usepackage{pxjahyper}
+\hypersetup{
+	colorlinks=false, % リンクに色をつけない設定
+	bookmarks=true, % 以下ブックマークに関する設定
+	bookmarksnumbered=true,
+	pdfborder={0 0 0},
+	bookmarkstype=toc
+}
+```
+
+- 参考  
+[【Tex】卒論修論には是非ハイパーリンク機能をつけよう](https://ossyaritoori.hatenablog.com/entry/2016/11/11/%E3%80%90Tex%E3%80%91%E5%8D%92%E8%AB%96%E4%BF%AE%E8%AB%96%E3%81%AB%E3%81%AF%E6%98%AF%E9%9D%9E%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E6%A9%9F%E8%83%BD%E3%82%92%E3%81%A4)
+
 
 ## コマンド
 - ビルド  
