@@ -87,7 +87,7 @@ platex "file.tex"
 
 ## コマンド
 - ビルド  
-  `platex ex1.tex`  
+  `platex ex1.tex --build_dir=out`  
 - pdfファイルの生成  
   `ptex2pdf -l ex1`  
   
