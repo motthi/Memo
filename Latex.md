@@ -84,6 +84,21 @@ platex "file.tex"
 - 参考  
 [【Tex】卒論修論には是非ハイパーリンク機能をつけよう](https://ossyaritoori.hatenablog.com/entry/2016/11/11/%E3%80%90Tex%E3%80%91%E5%8D%92%E8%AB%96%E4%BF%AE%E8%AB%96%E3%81%AB%E3%81%AF%E6%98%AF%E9%9D%9E%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E6%A9%9F%E8%83%BD%E3%82%92%E3%81%A4)
 
+## subcaption
+subcaptionパッケージを読み込むためには`\captionsetup{compatibility=false} `を行う必要がある
+これを実行するとcaptionの設定が初期化されてしまうため，一度退避させて再度読み込む
+```
+\makeatletter
+\let\MYcaption\@makecaption
+\makeatother
+
+\usepackage{subcaption}
+\captionsetup{compatibility=false}      % 必要に応じて
+
+\makeatletter
+\let\@makecaption\MYcaption
+\makeatother
+```
 
 ## コマンド
 - ビルド  
