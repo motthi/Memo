@@ -102,7 +102,7 @@ subcaptionパッケージを読み込むためには`\captionsetup{compatibility
 
 ## コマンド
 - ビルド  
-  `platex ex1.tex --build_dir=out`  
+  `platex -output-dir=out ex1.tex `  
 - pdfファイルの生成  
   `ptex2pdf -l ex1`  
   
