@@ -8,7 +8,6 @@ pbibtex out/doc # In case of Japanese
 
 ptex2pdf -l out/doc
 dvipdfmx out/doc.dvi -z 0    # Export pdf file without optimization
-
 ```
 
 ## Latexのインストール
