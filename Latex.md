@@ -1,4 +1,16 @@
 # Latexに関するメモ
+## コマンド早見表
+```
+platex -output-dir=out doc.tex   # build
+
+bibtex out/doc  # In case of English
+pbibtex out/doc # In case of Japanese
+
+ptex2pdf -l out/doc
+dvipdfmx out/doc.dvi -z 0    # Export pdf file without optimization
+
+```
+
 ## Latexのインストール
 - [Tex Wiki](https://texwiki.texjp.org/)
 - [LaTex プログラムコードを載せる時のプラグインListingsのインストール](https://kshi-kshi.hatenadiary.org/entry/20110219/1298117610)
@@ -101,10 +113,16 @@ subcaptionパッケージを読み込むためには`\captionsetup{compatibility
 ```
 
 ## コマンド
-- ビルド  
-  `platex -output-dir=out ex1.tex `  
-- pdfファイルの生成  
-  `ptex2pdf -l ex1`  
+```
+platex -output-dir=out doc.tex   # build
+
+bibtex out/doc  # In case of English
+pbibtex out/doc # In case of Japanese
+
+ptex2pdf -l out/doc
+dvipdfmx out/doc.dvi -z 0    # Export pdf file without optimization
+
+``` 
   
 ## Visual Studio Codeでのショートカット
 - ビルド  
