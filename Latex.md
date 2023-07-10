@@ -132,5 +132,5 @@ dvipdfmx out/doc.dvi -z 0    # Export pdf file without optimization
 ## 圧縮せずにPDFに出力
 Robomechではじかれることがある．  
 圧縮せずにPDFに出力すれば可能．  
-`dvipdfmx file.dvi -z 0`
+`dvipdfmx file.dvi -z 0 -V 4'`
 
