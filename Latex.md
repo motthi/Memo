@@ -56,22 +56,14 @@ platex "file.tex"
   CTLdash_repeated_names = "no"
 }
 ```
-次にTexファイルの本文の中に`\bstctlcite{IEEEexample:BSTcontrol}`と書く．  
-(begin{document}の直後）
 
-プリアンプルに以下を記入する
+`¥begin{document}`直下に以下を記載する．　　
 ```
-\makeatletter
-\def\bstctlcite{\@ifnextchar[{\@bstctlcite}{\@bstctlcite[@auxout]}}
-\def\@bstctlcite[#1]#2{\@bsphack
-\@for\@citeb:=#2\do{%
-\edef\@citeb{\expandafter\@firstofone\@citeb}%
-\if@filesw\immediate\write\csname #1\endcsname{\string\citation{\@citeb}}\fi}%
-\@esphack}
-\makeatother
+\bstctlcite{IEEEexample:BSTcontrol}
 ```
 
-- 参考  
+- 参考
+[texで同一著者の参考文献が連続すると"―"（ダッシュ）で省略されてしまう問題の対処法](https://yusuke-ujitoko.hatenablog.com/entry/2019/09/23/211057)　　
 [IEEEtran.bstで著者名が線になるのを防ぐ](http://kawaiihaseigi.blogspot.com/2015/02/ieeetranbib.html)  
 [Is it normal for BibTeX to replace similar author names with "------"?](https://tex.stackexchange.com/questions/29381/is-it-normal-for-bibtex-to-replace-similar-author-names-with)  
 [How to Use the IEEEtran BIBTEX Style](http://tug.ctan.org/biblio/bibtex/contrib/IEEEtran/IEEEtran_bst_HOWTO.pdf)  
