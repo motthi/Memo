@@ -64,7 +64,7 @@ platex "file.tex"
 
 `ieeeconf.cls`を使っていない場合，`\usepackage{ieeetrantools}`をプリアンプルに記入する．
 
-- 参考
+- 参考  
 [texで同一著者の参考文献が連続すると"―"（ダッシュ）で省略されてしまう問題の対処法](https://yusuke-ujitoko.hatenablog.com/entry/2019/09/23/211057)  
 [IEEEtran.bstで著者名が線になるのを防ぐ](http://kawaiihaseigi.blogspot.com/2015/02/ieeetranbib.html)  
 [Is it normal for BibTeX to replace similar author names with "------"?](https://tex.stackexchange.com/questions/29381/is-it-normal-for-bibtex-to-replace-similar-author-names-with)  
