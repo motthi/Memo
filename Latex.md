@@ -62,7 +62,17 @@ platex "file.tex"
 \bstctlcite{IEEEexample:BSTcontrol}
 ```
 
-`ieeeconf.cls`を使っていない場合，`\usepackage{ieeetrantools}`をプリアンプルに記入する．
+`ieeeconf.cls`を使っていない場合，`\usepackage{ieeetrantools}`をプリアンプルに記入する．  
+または以下のコマンド定義文をプリアンプルに記入する．
+```
+\makeatletter
+\def\bstctlcite#1{\@bsphack
+  \@for\@citeb:=#1\do{
+    \edef\@citeb{\expandafter\@firstofone\@citeb}
+    \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi}
+  \@esphack}
+\makeatother
+```
 
 - 参考  
 [texで同一著者の参考文献が連続すると"―"（ダッシュ）で省略されてしまう問題の対処法](https://yusuke-ujitoko.hatenablog.com/entry/2019/09/23/211057)  
